@@ -18,7 +18,10 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onclick="document.getElementById('song').play()">
+<audio id="song" loop>
+  <source src="audio/happy-birthday.mp3" type="audio/mpeg">
+</audio>
     <div id="wrapper">
         <div class="flag__birthday">
             <img src="./images/1.png" alt="" width="350" class="flag__left">
@@ -151,16 +154,6 @@
             </div>
         </div>
     </div>
-  <audio id="bdaySong" loop>
-  <source src="audio/happy-birthday.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-  document.addEventListener("click", function () {
-    const song = document.getElementById("bdaySong");
-    song.play().catch(() => {});
-  }, { once: true });
-</script>
 
 </body>
 <script>
