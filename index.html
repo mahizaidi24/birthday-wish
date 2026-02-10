@@ -151,9 +151,16 @@
             </div>
         </div>
     </div>
-   <audio id="bdaySong" loop>
-  <source src="audio/happy birthday.mp3" type="audio/mpeg">
+  <audio id="bdaySong" loop>
+  <source src="audio/happybirthday.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+  document.addEventListener("click", function () {
+    const song = document.getElementById("bdaySong");
+    song.play().catch(() => {});
+  }, { once: true });
+</script>
 
 </body>
 <script>
@@ -257,9 +264,6 @@
         boxmail.classList.remove('active')
     })
 
-      document.body.addEventListener('click', function () {
-    document.getElementById('bdaySong').play();
-  }, { once: true });
 </script>
 
 </html>
